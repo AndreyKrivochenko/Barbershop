@@ -1,0 +1,185 @@
+{% load static %}
+
+<!-- HEADER -->
+	<header id="header2">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 col-xs-5 logo">
+					<a href="{% url 'mainapp:index' %}"><img src="/media/images/logo-dark.png" class="img-responsive" alt=""/></a>
+				</div>
+				<div class="col-md-9 col-xs-7">
+					<div class="top-bar">
+						<ul>
+							<li class="tb-info">
+								<a data-dialog2="somedialog2" class="trigger">
+								<i class="fa fa-map-marker"></i>
+								<span>Find us on<br><em>Google Map</em></span>
+								</a>
+							</li>
+							<li class="tb-info">
+								<a data-dialog1="somedialog1" class="trigger">
+								<i class="fa fa-clock-o"></i>
+								<span class="hidden-xs">Our Salon Open Timings<br><em>We Work Every Day a Week</em></span>
+								<span class="visible-xs hidden-sm hidden-md hidden-lg">Open Timings</span>
+								</a>
+							</li>
+							<li>
+								<a data-dialog="somedialog" class="trigger button btn-xs color">Book Online</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="menu-wrap">
+				<div id="mobnav-btn">Menu <i class="fa fa-bars"></i></div>
+				<ul class="sf-menu">
+					<li>
+						<a href="#">Home</a>
+						<div class="mobnav-subarrow"><i class="fa fa-plus"></i></div>
+						<ul>
+							<li><a href="./index.html">Home - Default</a></li>
+							<li><a href="./index-onepage.html">Home - Onepage 1</a></li>
+							<li><a href="./index-onepage2.html">Home - Onepage 2</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Pages</a>
+						<div class="mobnav-subarrow"><i class="fa fa-plus"></i></div>
+						<ul>
+							<li><a href="./about.html">About</a></li>
+							<li><a href="./services-2col.html">Services - 2 col</a></li>
+							<li><a href="./services-3col.html">Services - 3 col</a></li>
+							<li><a href="./services-4col.html">Services - 4 col</a></li>
+							<li>
+								<a class="sf-with-ul" href="#">Services - Single</a>
+								<ul>
+									<li><a href="./service-single-image.html">Single Image</a></li>
+									<li><a href="./service-single-slider.html">Single Slider</a></li>
+									<li><a href="./service-single-video.html">Single Video</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="sf-mmenu">
+						<a href="#">Features</a>
+						<div class="mobnav-subarrow"><i class="fa fa-plus"></i></div>
+						<div class="sf-mega">
+							<div class="sf-mega-section">
+								<span>
+								<a href="./accordion.html">Accordion</a>
+								<a href="./buttons.html">Button</a>
+								<a href="./blockquote.html">Blockquotes</a>
+								</span>
+							</div>
+							<div class="sf-mega-section">
+								<span>
+								<a href="./columns.html">Columns</a>
+								<a href="./headings.html">Headings</a>
+								<a href="./parallax.html">Parallax</a>
+								</span>
+							</div>
+							<div class="sf-mega-section">
+								<span>
+								<a href="./services-2col.html">Services</a>
+								<a href="./tabs.html">Tabs</a>
+								<a href="./testimonial.html">Testimonial</a>
+								</span>
+							</div>
+							<div class="sf-mega-section">
+								<span>
+								<a href="./video.html">Video</a>
+								<a href="./shop-full.html">Shop</a>
+								<a href="./shop-single-full.html">Shop Single Page</a>
+								</span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="#">Shop</a>
+						<div class="mobnav-subarrow"><i class="fa fa-plus"></i></div>
+						<ul>
+							<li><a href="./shop-left.html">Shop - Left Sidebar</a></li>
+							<li><a href="./shop-right.html">Shop - Right Sidebar</a></li>
+							<li><a href="./shop-full.html">Shop - Full Width</a></li>
+							<li>
+								<a class="sf-with-ul" href="./shop-single-left.html">Shop - Single</a>
+								<ul>
+									<li><a href="./shop-single-left.html">Left Sidebar</a></li>
+									<li><a href="./shop-single-right.html">Right Sidebar</a></li>
+									<li><a href="./shop-single-full.html">Full Width</a></li>
+								</ul>
+							</li>
+							<li><a href="./shop-cart.html">Shop - Cart</a></li>
+							<li><a href="./shop-checkout.html">Shop - Checkout</a></li>
+							<li><a href="./shop-account.html">Shop - Account</a></li>
+							<li><a href="./shop-account2.html">Shop - Account Info</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Blog</a>
+						<div class="mobnav-subarrow"><i class="fa fa-plus"></i></div>
+						<ul>
+							<li><a href="./blog.html">Blog - 1 col</a></li>
+							<li><a href="./blog2.html">Blog - 2 col</a></li>
+							<li><a href="./blog3.html">Blog - 3 col</a></li>
+							<li><a href="./blog-single.html">Blog - Single</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="{% url 'mainapp:contact' %}">Contact</a>
+					</li>
+				</ul>
+				<div class="header-xtra">
+					<div class="s-cart">
+						<div class="sc-ico"><i class="fa fa-shopping-cart"></i><em>2</em></div>
+
+						<div class="cart-info">
+							<small>You have <em class="highlight">2 item(s)</em> in your shopping bag</small>
+							<br>
+							<br>
+							<div class="ci-item">
+								<img src="/media/images/shop/2.jpg" width="70" alt=""/>
+								<div class="ci-item-info">
+									<h5><a href="./single-product.html">Product fashion</a></h5>
+									<p>2 x $250.00</p>
+									<div class="ci-edit">
+										<a href="#" class="edit fa fa-edit"></a>
+										<a href="#" class="edit fa fa-trash"></a>
+									</div>
+								</div>
+							</div>
+							<div class="ci-item">
+								<img src="/media/images/shop/8.jpg" width="70" alt=""/>
+								<div class="ci-item-info">
+									<h5><a href="./single-product.html">Product fashion</a></h5>
+									<p>2 x $250.00</p>
+									<div class="ci-edit">
+										<a href="#" class="edit fa fa-edit"></a>
+										<a href="#" class="edit fa fa-trash"></a>
+									</div>
+								</div>
+							</div>
+							<div class="ci-total">Subtotal: $750.00</div>
+							<div class="cart-btn">
+								<a href="#">View Bag</a>
+								<a href="#">Checkout</a>
+							</div>
+						</div>
+					</div>
+					<div class="s-search">
+						<div class="ss-ico"><i class="fa fa-search"></i></div>
+						<div class="search-block">
+							<div class="ssc-inner">
+								<form>
+									<input type="text" placeholder="Type Search text here...">
+									<button type="submit"><i class="fa fa-search"></i></button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="close-btn fa fa-times"></div>

@@ -1,0 +1,28 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block title %}
+    Barbershop | Main
+{% endblock %}
+
+{% block content %}
+
+	<!-- SLIDER -->
+    {% include 'mainapp/includes/inc_main_slider.html' %}
+
+	<!-- SERVICES -->
+	{% include 'mainapp/includes/inc_services.html' %}
+	
+	<!-- GALLERY -->
+    {% include 'mainapp/includes/inc_gallery.html' %}
+
+	<!-- PRICING -->
+	{% include 'mainapp/includes/inc_pricing.html' %}
+	
+	<!-- STATS -->
+    {% include 'mainapp/includes/inc_stats.html' %}
+
+    <!-- RECENT PRODUCTS -->
+    {% include 'mainapp/includes/inc_recent_products.html' %}
+
+{% endblock %}

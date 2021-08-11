@@ -15,17 +15,14 @@ Including another URLconf
 """
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
 
 from Barbershop import settings
-from mainapp.views import page_not_found
+from mainapp.views import IndexView, ContactView
+
+app_name = 'mainapp'
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('mainapp.urls'))
+    path('', IndexView.as_view(), name='index'),
+    path('contact/', ContactView.as_view(), name='contact')
 ]
-
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
-handler404 = page_not_found
