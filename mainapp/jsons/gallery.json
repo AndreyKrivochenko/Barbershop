@@ -1,0 +1,26 @@
+[
+  {
+    "class_obj": "headshaves",
+    "image": "images/home-page/projects/1.jpg",
+    "name": "OUR Best shaves",
+    "short_desc": "design and idea"
+  },
+  {
+    "class_obj": "restyle",
+    "image": "images/home-page/projects/2.jpg",
+    "name": "OUR Best restle",
+    "short_desc": "design and idea"
+  },
+  {
+    "class_obj": "manicure",
+    "image": "images/home-page/projects/3.jpg",
+    "name": "OUR Best manicure",
+    "short_desc": "design and idea"
+  },
+  {
+    "class_obj": "stubble",
+    "image": "images/home-page/projects/4.jpg",
+    "name": "OUR Best stubble",
+    "short_desc": "design and idea"
+  }
+]
