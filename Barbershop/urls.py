@@ -22,7 +22,8 @@ from mainapp.views import page_not_found
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('mainapp.urls'))
+    path('', include('mainapp.urls')),
+    path('services/', include('servicesapp.urls')),
 ]
 
 if settings.DEBUG:
