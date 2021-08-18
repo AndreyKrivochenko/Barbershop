@@ -34,10 +34,10 @@
 				<div id="mobnav-btn">Menu <i class="fa fa-bars"></i></div>
 				<ul class="sf-menu">
 					<li>
-						<a href="#">Home</a>
+						<a href="{% url 'mainapp:index' %}">Home</a>
 						<div class="mobnav-subarrow"><i class="fa fa-plus"></i></div>
 						<ul>
-							<li><a href="./index.html">Home - Default</a></li>
+							<li><a href="{% url 'mainapp:index' %}">Home - Default</a></li>
 							<li><a href="./index-onepage.html">Home - Onepage 1</a></li>
 							<li><a href="./index-onepage2.html">Home - Onepage 2</a></li>
 						</ul>
@@ -46,7 +46,7 @@
 						<a href="#">Pages</a>
 						<div class="mobnav-subarrow"><i class="fa fa-plus"></i></div>
 						<ul>
-							<li><a href="./about.html">About</a></li>
+							<li><a href="{% url 'mainapp:about' %}">About</a></li>
 							<li><a href="./services-2col.html">Services - 2 col</a></li>
 							<li><a href="./services-3col.html">Services - 3 col</a></li>
 							<li><a href="./services-4col.html">Services - 4 col</a></li>

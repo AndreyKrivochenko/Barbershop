@@ -3,7 +3,7 @@ import os
 
 from django.core.management import BaseCommand
 
-from mainapp.models import ClassForMainGallery, MainGallery, MainSlider
+from mainapp.models import ClassForMainGallery, MainGallery, MainSlider, AboutUs
 
 JSON_PATH = 'mainapp/jsons'
 
@@ -38,3 +38,8 @@ class Command(BaseCommand):
         for slide in slider:
             new_slide = MainSlider(**slide)
             new_slide.save()
+
+        about = load_from_json('about')
+        AboutUs.objects.all().delete()
+        new_about = AboutUs(**about)
+        new_about.save()

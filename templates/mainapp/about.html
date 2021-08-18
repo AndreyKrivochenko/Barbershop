@@ -1,0 +1,80 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block title %}
+    Barbershop | About Us
+{% endblock %}
+
+{% block content %}
+	<!-- INNER CONTENT -->
+	<section id="content">
+		<div class="page_header page_header2 text-center">
+			<h2>About us</h2>
+			<p>Get the best kit for smooth shave</p>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<img src="/media/{{ accordion.image }}" class="img-responsive" alt=""/>
+				</div>
+				<div class="col-md-6 about-info">
+					<h2>History of barbershop</h2>
+					<p>Suspendisse a eleifend lorem. Cras efficitur risus sed mi condimentum accumsan. Vestibulum vitae viverra nisl, vitae volutpat turpis. Nam iaculis eu risus nec tristique. Ut eu mattis mauris. In eget finibus mi. Phasellus feugiat lacus eget nibh pulvinar lacinia. Maecenas nec sodales nibh.</p>
+					<p>Nulla purus felis, fringilla quis orci id, consectetur molestie mauris. Praesent at lectus sagittis, sagittis elit eget, tempus dui. Maecenas eu pulvinar urna, ac sodales ex. Curabitur ullamcorper nec nisl quis eleifend. Morbi malesuada est ante, ac gravida eros tincidunt et. Nullam in lobortis lacus. Cras eu accumsan lacus.</p>
+					<div class="panel-group" id="accordion-e1">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-e1" href="#collapseOne">
+									{{ accordion.head_1 }}
+									<span class="fa fa-angle-down"></span>
+									</a>
+								</h4>
+							</div>
+							<div id="collapseOne" class="panel-collapse collapse in">
+								<div class="panel-body">
+									<div class="row">
+										<p>{{ accordion.text_1 }}</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-e1" href="#collapseTwo">
+									{{ accordion.head_2 }}
+									<span class="fa fa-angle-right"></span>
+									</a>
+								</h4>
+							</div>
+							<div id="collapseTwo" class="panel-collapse collapse">
+								<div class="panel-body">
+									<p>{{ accordion.text_2 }}</p>
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-e1" href="#collapseThree">
+									{{ accordion.head_3 }}
+									<span class="fa fa-angle-right"></span>
+									</a>
+								</h4>
+							</div>
+							<div id="collapseThree" class="panel-collapse collapse">
+								<div class="panel-body">
+									<p>{{ accordion.text_3 }}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<div class="clearfix space70"></div>
+
+{% endblock %}

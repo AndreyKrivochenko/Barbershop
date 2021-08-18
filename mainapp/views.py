@@ -1,7 +1,7 @@
 from django.http import HttpResponseNotFound
 from django.views.generic import TemplateView
 
-from mainapp.models import MainGallery, MainSlider
+from mainapp.models import MainGallery, MainSlider, AboutUs
 
 
 class IndexView(TemplateView):
@@ -18,6 +18,16 @@ class IndexView(TemplateView):
 
 class ContactView(TemplateView):
     template_name = 'mainapp/contact.html'
+
+
+class AboutView(TemplateView):
+    template_name = 'mainapp/about.html'
+
+    def get_context_data(self, **kwargs):
+        data = super(AboutView, self).get_context_data(**kwargs)
+        accordion = AboutUs.objects.all()[0]
+        data['accordion'] = accordion
+        return data
 
 
 def page_not_found(request, exception):
