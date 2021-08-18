@@ -1,0 +1,17 @@
+[
+  {
+    "image": "images/slider/1.jpg",
+    "description": "\"Barbershop\" is donec malesuada convallis neque eget varius erat faucibus quis lacus enim scelerisque vel hendrerit eget pulvinar quis.",
+    "button_name": "Book Online"
+  },
+  {
+    "image": "images/slider/2.jpg",
+    "description": "\"Barbershop\" is donec malesuada convallis neque eget varius erat faucibus quis lacus enim scelerisque vel hendrerit eget pulvinar quis.",
+    "button_name": "Book Online"
+  },
+  {
+    "image": "images/slider/3.jpg",
+    "description": "\"Barbershop\" is donec malesuada convallis neque eget varius erat faucibus quis lacus enim scelerisque vel hendrerit eget pulvinar quis.",
+    "button_name": "Book Online"
+  }
+]

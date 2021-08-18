@@ -2,44 +2,20 @@
 
     <div class="container-fluid no-padding">
 		<div id="home-slider2" class="owl-carousel owl-theme">
+            {% for slide in slider %}
 			<div class="item">
-				<img src="/media/images/slider/2/1.jpg" class="img-responsive" alt=""/>
+				<img src="/media/{{ slide.image }}" class="img-responsive" alt=""/>
 				<div class="container no-padding">
 					<div class="hs-caption">
 						<div class="caption-inner">
 							<h4>Welcome to <span>Barbershop</span></h4>
-							<p>"Barbershop" is donec malesuada convallis neque eget varius erat faucibus quis lacus enim scelerisque vel hendrerit eget pulvinar quis.</p>
+							<p>{{ slide.description }}</p>
 							<br>
-							<a href="#" class="button btn-xs btn-center color">Book Online</a>
+							<a href="{{ slide.url }}" class="button btn-xs btn-center color">{{ slide.button_name }}</a>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="item">
-				<img src="/media/images/slider/2/2.jpg" class="img-responsive" alt=""/>
-				<div class="container no-padding">
-					<div class="hs-caption">
-						<div class="caption-inner">
-							<h4>Welcome to <span>Barbershop</span></h4>
-							<p>"Barbershop" is donec malesuada convallis neque eget varius erat faucibus quis lacus enim scelerisque vel hendrerit eget pulvinar quis.</p>
-							<br>
-							<a href="#" class="button btn-xs btn-center color">Book Online</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="item">
-				<img src="/media/images/slider/2/3.jpg" class="img-responsive" alt=""/>
-				<div class="container no-padding">
-					<div class="hs-caption">
-						<div class="caption-inner">
-							<h4>Welcome to <span>Barbershop</span></h4>
-							<p>"Barbershop" is donec malesuada convallis neque eget varius erat faucibus quis lacus enim scelerisque vel hendrerit eget pulvinar quis.</p>
-							<br>
-							<a href="#" class="button btn-xs btn-center color">Book Online</a>
-						</div>
-					</div>
-				</div>
-			</div>
+            {% endfor %}
 		</div>
 	</div>

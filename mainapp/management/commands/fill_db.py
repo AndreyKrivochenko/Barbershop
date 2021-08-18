@@ -3,7 +3,7 @@ import os
 
 from django.core.management import BaseCommand
 
-from mainapp.models import ClassForMainGallery, MainGallery
+from mainapp.models import ClassForMainGallery, MainGallery, MainSlider
 
 JSON_PATH = 'mainapp/jsons'
 
@@ -31,3 +31,10 @@ class Command(BaseCommand):
             gal['class_obj'] = class_obj
             new_gal = MainGallery(**gal)
             new_gal.save()
+
+        slider = load_from_json('slider')
+
+        MainSlider.objects.all().delete()
+        for slide in slider:
+            new_slide = MainSlider(**slide)
+            new_slide.save()
