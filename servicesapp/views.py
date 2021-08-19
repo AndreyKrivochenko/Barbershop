@@ -1,3 +1,5 @@
+from random import sample
+
 from django.views.generic import TemplateView, DetailView
 
 from .models import ServicesCategories, Services
@@ -20,4 +22,7 @@ class ServiceDetailView(DetailView):
     def get_context_data(self, **kwargs):
         data = super(ServiceDetailView, self).get_context_data(**kwargs)
         service_pk = self.kwargs['pk']
-        print(self.kwargs)
+        data['service'] = Services.get_single_service(service_pk)
+        data['other_services'] = sample(list(Services.objects.exclude(pk=service_pk)), 3)
+        print(data['other_services'])
+        return data

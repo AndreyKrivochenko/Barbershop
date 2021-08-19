@@ -110,6 +110,10 @@ class Services(models.Model):
     def get_services():
         return Services.objects.filter(is_active=True)
 
+    @staticmethod
+    def get_single_service(pk):
+        return Services.objects.get(pk=pk)
+
     class Meta:
         verbose_name = 'Услуга'
         verbose_name_plural = 'Услуги'

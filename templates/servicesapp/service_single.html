@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-    Barbershop | Services |
+    Barbershop | Services | {{ service.name }}
 {% endblock %}
 
 {% block content %}
@@ -17,30 +17,30 @@
 				<div class="col-md-9">
 					<div id="blog-slider" class="owl-carousel owl-theme">
 						<div class="item">
-							<img src="images/projects/2/1.jpg" class="img-responsive" alt="">
+							<img src="/media/{{ service.image_slider_1 }}" class="img-responsive" alt="">
 						</div>
 						<div class="item">
-							<img src="images/projects/2/2.jpg" class="img-responsive" alt="">
+							<img src="/media/{{ service.image_slider_2 }}" class="img-responsive" alt="">
 						</div>
 						<div class="item">
-							<img src="images/projects/2/3.jpg"  class="img-responsive" alt="">
+							<img src="/media/{{ service.image_slider_3 }}"  class="img-responsive" alt="">
 						</div>
 					</div>
 					<div class="service-info">
-						<h2>Hair Coloring</h2>
-						<p>Donec tristique tellus est maximus lobortis libero. Duis augue tellus, euismod quis neque et, luctus condimentum turpis. Pellentesque sagittis, risus vitae scelerisque ultrices, ligula quam feugiat erat, eget luctus magna justo nec eros. Nullam ullamcorper nisi orci, in tincidunt diam aliquet vel. Ut in lobortis dolor. Praesent posuere varius libero sit amet efficitur. Etiam ornare suscipit ultricies. Ut facilisis ut ante nec molestie. Nullam venenatis scelerisque mauris, nec cursus magna condimentum vel.</p>
+						<h2>{{ service.name }}</h2>
+						<p>{{ service.description }}</p>
 						<a href="#" class="button color pull-left">Book Appointment</a>
 					</div>
 				</div>
 				<div class="col-md-3">
 					<div class="fs-info">
 						<h3 class="heading">Features</h3>
-						<p>Lorem ipsum dolor sit amet consequat libero auctor. Morbi sit amet augue porta, egestas odio eget, vulputate purus. Nulla convallis porta scelerisque. Nullam at consectetur odio.</p>
+						<p>{{ service.features }}</p>
 						<div class="clearfix space20"></div>
 						<ul class="fs-meta">
-							<li>- For Men / Women</li>
-							<li>- Special Rates for members</li>
-							<li>- VIP Welcome</li>
+							<li>{{ service.for_gender }}</li>
+							<li>{{ service.special_rate }}</li>
+							<li>{{ service.vip }}</li>
 						</ul>
 					</div>
 				</div>
@@ -48,55 +48,21 @@
 			<div class="clearfix space30"></div>
 			<h4 class="heading">Other Services</h4>
 			<hr>
-			<div id="portfolio-home" class="isotope gutter folio-boxed-4col">
-				<div class="project-item makeup beautyspa makeup">
-					<a href="./service-single-slider.html">
+			<div id="portfolio-home" class="isotope gutter folio-boxed-3col">
+                {% for serv in other_services %}
+                <div class="project-item {{ serv.category.class_cat }}">
+					<a href="{% url 'servicesapp:service_detail' serv.pk %}">
 						<div class="project-gal">
-							<img src="images/projects/2.jpg" class="img-responsive" alt="">
+							<img src="/media/{{ serv.main_image }}" class="img-responsive" alt="">
 							<div class="overlay-folio2">
 								<div class="project-info">
-									<h2>Hair Straightening</h2>
+									<h2>{{ serv.name }}</h2>
 								</div>
 							</div>
 						</div>
 					</a>
 				</div>
-				<div class="project-item makeup shower">
-					<a href="./service-single-slider.html">
-						<div class="project-gal">
-							<img src="images/projects/3.jpg" class="img-responsive" alt="">
-							<div class="overlay-folio2">
-								<div class="project-info">
-									<h2>Hair Shower</h2>
-								</div>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="project-item photography beautyspa">
-					<a href="./service-single-slider.html">
-						<div class="project-gal">
-							<img src="images/projects/4.jpg" class="img-responsive" alt="">
-							<div class="overlay-folio2">
-								<div class="project-info">
-									<h2>Men Haircut</h2>
-								</div>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="project-item photography coloring">
-					<a href="./service-single-slider.html">
-						<div class="project-gal">
-							<img src="images/projects/5.jpg" class="img-responsive" alt="">
-							<div class="overlay-folio2">
-								<div class="project-info">
-									<h2>Beauty Spa</h2>
-								</div>
-							</div>
-						</div>
-					</a>
-				</div>
+                {% endfor %}
 			</div>
 		</div>
 	</section>
