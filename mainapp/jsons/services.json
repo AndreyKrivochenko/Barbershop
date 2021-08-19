@@ -1,0 +1,58 @@
+[
+  {
+    "category": "Hair coloring",
+    "name": "Balayage",
+    "description": "This pretty-sounding French term, which means to sweep or paint, also has a very pretty effect on hair. During a Balayage service, which is a highlighting technique, a colorist paints bleach or haircolor just on the surface of your hair freehand; he or she doesn’t saturate the entire section with hairdye. The result is soft, natural-looking, sun-kissed highlights that easily blend in as hair grows longer.",
+    "features": "Lorem ipsum dolor sit amet consequat libero auctor. Morbi sit amet augue porta, egestas odio eget, vulputate purus. Nulla convallis porta scelerisque. Nullam at consectetur odio.",
+    "for_gender": "- For Women",
+    "special_rate": "- Special Rates for members",
+    "vip": "- VIP Welcome",
+    "main_image": "images/services/Balayage_main.jpg",
+    "image_slider_1": "images/services/Balayage_1.jpg",
+    "image_slider_2": "images/services/Balayage_2.jpg",
+    "image_slider_3": "images/services/Balayage_3.jpg",
+    "price": "175"
+  },
+  {
+    "category": "Hair coloring",
+    "name": "Ombre",
+    "description": "In this haircolor technique, your root haircolor gradually fades into a much lighter haircolor at the ends, such as blonde. If your hair isn’t already dark, you may want your colorist to deepen your natural shade at the roots for a more dramatic Ombre. Hair stylist tip: Balayage is the technique while ombre is an end look. Your colorist will use the balayage technique to achieve an ombre.",
+    "features": "Lorem ipsum dolor sit amet consequat libero auctor. Morbi sit amet augue porta, egestas odio eget, vulputate purus. Nulla convallis porta scelerisque. Nullam at consectetur odio.",
+    "for_gender": "- For Women",
+    "special_rate": "- Special Rates for members",
+    "vip": "- VIP Welcome",
+    "main_image": "images/services/Ombre_main.jpg",
+    "image_slider_1": "images/services/Ombre_1.jpg",
+    "image_slider_2": "images/services/Ombre_2.jpg",
+    "image_slider_3": "images/services/Ombre_3.jpg",
+    "price": "150"
+  },
+  {
+    "category": "Makeup",
+    "name": "Signature Makeover",
+    "description": "Our Signature Makeover allows you to create a personalised, full-face beauty look to complement any makeup mood and occasion. Dial it up or down - you’re in control.",
+    "features": "Lorem ipsum dolor sit amet consequat libero auctor. Morbi sit amet augue porta, egestas odio eget, vulputate purus. Nulla convallis porta scelerisque. Nullam at consectetur odio.",
+    "for_gender": "- For Women",
+    "special_rate": "- Special Rates for members",
+    "vip": "- VIP Welcome",
+    "main_image": "images/services/Signature_main.jpg",
+    "image_slider_1": "images/services/Signature_1.jpg",
+    "image_slider_2": "images/services/Signature_2.jpg",
+    "image_slider_3": "images/services/Signature_3.jpg",
+    "price": "95"
+  },
+  {
+    "category": "Makeup",
+    "name": "Simplif-Eyed",
+    "description": "Make your eyes the focus and give your lids the love they deserve. Our Simplif-eyed Makeover consists of a complete eye look, including colour, brows, liner and mascara.",
+    "features": "Lorem ipsum dolor sit amet consequat libero auctor. Morbi sit amet augue porta, egestas odio eget, vulputate purus. Nulla convallis porta scelerisque. Nullam at consectetur odio.",
+    "for_gender": "- For Women",
+    "special_rate": "- Special Rates for members",
+    "vip": "- VIP Welcome",
+    "main_image": "images/services/Simplifeyed_main.jpg",
+    "image_slider_1": "images/services/Simplifeyed_1.jpg",
+    "image_slider_2": "images/services/Simplifeyed_2.jpg",
+    "image_slider_3": "images/services/Simplifeyed_3.jpg",
+    "price": "60"
+  }
+]

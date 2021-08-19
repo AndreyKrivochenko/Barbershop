@@ -13,6 +13,11 @@ class ServicesCategories(models.Model):
         verbose_name='Описание',
         blank=True,
     )
+    class_cat = models.CharField(
+        max_length=20,
+        blank=False,
+        verbose_name='CSS класс для категории'
+    )
     created_at = models.DateTimeField(
         auto_now_add=True,
     )
@@ -25,6 +30,10 @@ class ServicesCategories(models.Model):
 
     def __str__(self):
         return self.name
+
+    @staticmethod
+    def get_categories():
+        return ServicesCategories.objects.filter(is_active=True)
 
     class Meta:
         verbose_name = 'Категория услуг'
@@ -98,8 +107,8 @@ class Services(models.Model):
         return f'{self.name} ({self.category})'
 
     @staticmethod
-    def get_items_by_category(category_pk):
-        return Services.objects.filter(is_active=True, category__pk=category_pk)
+    def get_services():
+        return Services.objects.filter(is_active=True)
 
     class Meta:
         verbose_name = 'Услуга'

@@ -16,121 +16,28 @@
 		<div class="container">
 			<section id="portfolio-section">
 				<ul class="filter no-margin-top" data-option-key="filter">
-					<li><a class="selected" href="#filter" data-option-value="*">All</a></li>
-					<li><a href="#" data-option-value=".coloring">Hair coloring</a></li>
-					<li><a href="#" data-option-value=".makeup">Makeup</a></li>
-					<li><a href="#" data-option-value=".beautyspa">Beauty spa</a></li>
-					<li><a href="#" data-option-value=".shower">Shower</a></li>
+					<li><a class="selected" href="#" data-option-value="*">All</a></li>
+                    {% for category in categories %}
+					<li><a href="#" data-option-value=".{{ category.class_cat }}">{{ category.name }}</a></li>
+                    {% endfor %}
 				</ul>
 				<div id="portfolio-home" class="isotope gutter folio-boxed-3col">
-					<div class="project-item photography coloring">
-						<a href="./service-single-slider.html">
+
+                    {% for service in services %}
+                    <div class="project-item {{ service.category.class_cat }}">
+						<a href="{% url 'servicesapp:service_detail' service.pk %}">
 							<div class="project-gal">
-								<img src="/media/images/projects/1.jpg" class="img-responsive" alt="">
+								<img src="/media/{{ service.main_image }}" class="img-responsive" alt="">
 								<div class="overlay-folio2">
 									<div class="project-info">
-										<h2>Hair Coloring</h2>
+										<h2>{{ service.name }}</h2>
 									</div>
 								</div>
 							</div>
 						</a>
 					</div>
-					<div class="project-item makeup beautyspa makeup">
-						<a href="./service-single-slider.html">
-							<div class="project-gal">
-								<img src="/media/images/projects/2.jpg" class="img-responsive" alt="">
-								<div class="overlay-folio2">
-									<div class="project-info">
-										<h2>Hair Straightening</h2>
-									</div>
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class="project-item makeup shower">
-						<a href="./service-single-slider.html">
-							<div class="project-gal">
-								<img src="/media/images/projects/3.jpg" class="img-responsive" alt="">
-								<div class="overlay-folio2">
-									<div class="project-info">
-										<h2>Hair Shower</h2>
-									</div>
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class="project-item photography beautyspa">
-						<a href="./service-single-slider.html">
-							<div class="project-gal">
-								<img src="/media/images/projects/4.jpg" class="img-responsive" alt="">
-								<div class="overlay-folio2">
-									<div class="project-info">
-										<h2>Men Haircut</h2>
-									</div>
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class="project-item coloring">
-						<a href="./service-single-slider.html">
-							<div class="project-gal">
-								<img src="/media/images/projects/5.jpg" class="img-responsive" alt="">
-								<div class="overlay-folio2">
-									<div class="project-info">
-										<h2>Beauty Spa</h2>
-									</div>
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class="project-item makeup beautyspa shower">
-						<a href="./service-single-slider.html">
-							<div class="project-gal">
-								<img src="/media/images/projects/6.jpg" class="img-responsive" alt="">
-								<div class="overlay-folio2">
-									<div class="project-info">
-										<h2>Makeup / Facial</h2>
-									</div>
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class="project-item photography coloring">
-						<a href="./service-single-slider.html">
-							<div class="project-gal">
-								<img src="/media/images/projects/1.jpg" class="img-responsive" alt="">
-								<div class="overlay-folio2">
-									<div class="project-info">
-										<h2>Hair Coloring</h2>
-									</div>
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class="project-item makeup beautyspa makeup">
-						<a href="./service-single-slider.html">
-							<div class="project-gal">
-								<img src="/media/images/projects/2.jpg" class="img-responsive" alt="">
-								<div class="overlay-folio2">
-									<div class="project-info">
-										<h2>Hair Straightening</h2>
-									</div>
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class="project-item makeup shower">
-						<a href="./service-single-slider.html">
-							<div class="project-gal">
-								<img src="/media/images/projects/3.jpg" class="img-responsive" alt="">
-								<div class="overlay-folio2">
-									<div class="project-info">
-										<h2>Hair Shower</h2>
-									</div>
-								</div>
-							</div>
-						</a>
-					</div>
+                    {% endfor %}
+
 				</div>
 			</section>
 		</div>

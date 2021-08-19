@@ -4,6 +4,7 @@ import os
 from django.core.management import BaseCommand
 
 from mainapp.models import ClassForMainGallery, MainGallery, MainSlider, AboutUs
+from servicesapp.models import ServicesCategories, Services
 
 JSON_PATH = 'mainapp/jsons'
 
@@ -43,3 +44,20 @@ class Command(BaseCommand):
         AboutUs.objects.all().delete()
         new_about = AboutUs(**about)
         new_about.save()
+
+        # Создаём категории для услуг
+        services_categories = load_from_json('services_categories')
+        ServicesCategories.objects.all().delete()
+        for category in services_categories:
+            new_category = ServicesCategories(**category)
+            new_category.save()
+
+        # Создаем услуги
+        services = load_from_json('services')
+        Services.objects.all().delete()
+        for service in services:
+            service_cat = service['category']
+            cat_obj = ServicesCategories.objects.get(name=service_cat)
+            service['category'] = cat_obj
+            new_service = Services(**service)
+            new_service.save()

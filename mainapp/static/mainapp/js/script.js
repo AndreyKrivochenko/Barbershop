@@ -306,8 +306,8 @@ $(window).load(function() {
     });
 
     // MASONRY
-    var $container = $('#portfolio-home');
-    $container.isotope({
+    var $containerHome = $( "#portfolio-home" );
+    $containerHome.isotope({
         itemSelector: '.project-item'
     });
     var $optionSets = $('#portfolio-section .filter'),
@@ -328,7 +328,7 @@ $(window).load(function() {
         if (key === 'layoutMode' && typeof changeLayoutMode === 'function') {
             changeLayoutMode($this, options);
         } else {
-            $container.isotope(options);
+            $containerHome.isotope(options);
         }
         return false;
     });

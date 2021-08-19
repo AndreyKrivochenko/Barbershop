@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Hair coloring",
+    "class_cat": "coloring"
+  },
+  {
+    "name": "Makeup",
+    "class_cat": "makeup"
+  },
+  {
+    "name": "Beauty spa",
+    "class_cat": "beautyspa"
+  },
+  {
+    "name": "Shower",
+    "class_cat": "shower"
+  }
+]
