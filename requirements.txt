@@ -4,3 +4,4 @@ django-environ
 pytz==2021.1
 sqlparse==0.4.1
 Pillow
+django-imagekit

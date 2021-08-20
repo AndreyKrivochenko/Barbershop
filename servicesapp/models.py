@@ -1,4 +1,6 @@
 from django.db import models
+from imagekit.models import ImageSpecField
+from imagekit.processors import ResizeToFill
 
 
 class ServicesCategories(models.Model):
@@ -75,17 +77,41 @@ class Services(models.Model):
         upload_to='images/services',
         verbose_name='Главная картинка',
     )
+    main_image_thumb = ImageSpecField(
+        source='main_image',
+        processors=[ResizeToFill(359, 262)],
+        format='JPEG',
+        options={'quality': 80}
+    )
     image_slider_1 = models.ImageField(
         upload_to='images/services',
         verbose_name='Картинка для слайдера 1',
+    )
+    image_slider_1_thumb = ImageSpecField(
+        source='image_slider_1',
+        processors=[ResizeToFill(825, 473)],
+        format='JPEG',
+        options={'quality': 80}
     )
     image_slider_2 = models.ImageField(
         upload_to='images/services',
         verbose_name='Картинка для слайдера 2',
     )
+    image_slider_2_thumb = ImageSpecField(
+        source='image_slider_2',
+        processors=[ResizeToFill(825, 473)],
+        format='JPEG',
+        options={'quality': 80}
+    )
     image_slider_3 = models.ImageField(
         upload_to='images/services',
         verbose_name='Картинка для слайдера 3',
+    )
+    image_slider_3_thumb = ImageSpecField(
+        source='image_slider_3',
+        processors=[ResizeToFill(825, 473)],
+        format='JPEG',
+        options={'quality': 80}
     )
     price = models.DecimalField(
         max_digits=8,

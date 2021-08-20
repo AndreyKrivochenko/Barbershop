@@ -59,5 +59,4 @@ class Command(BaseCommand):
             service_cat = service['category']
             cat_obj = ServicesCategories.objects.get(name=service_cat)
             service['category'] = cat_obj
-            new_service = Services(**service)
-            new_service.save()
+            Services.objects.create(**service)

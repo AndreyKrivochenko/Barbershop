@@ -27,7 +27,7 @@
                     <div class="project-item {{ service.category.class_cat }}">
 						<a href="{% url 'servicesapp:service_detail' service.pk %}">
 							<div class="project-gal">
-								<img src="/media/{{ service.main_image }}" class="img-responsive" alt="">
+								<img src="{{ service.main_image_thumb.url }}" class="img-responsive" alt="">
 								<div class="overlay-folio2">
 									<div class="project-info">
 										<h2>{{ service.name }}</h2>

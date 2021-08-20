@@ -24,5 +24,4 @@ class ServiceDetailView(DetailView):
         service_pk = self.kwargs['pk']
         data['service'] = Services.get_single_service(service_pk)
         data['other_services'] = sample(list(Services.objects.exclude(pk=service_pk)), 3)
-        print(data['other_services'])
         return data
