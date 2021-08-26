@@ -3529,7 +3529,8 @@ transform:translateY(-50%);
 }
 
 .header-xtra .ss-ico ,
-.header-xtra .sc-ico {
+.header-xtra .sc-ico ,
+.header-xtra .su-ico {
     padding: 0 3px;
     color: #bcbcbc;
     font-size: 15px;
@@ -3538,7 +3539,8 @@ transform:translateY(-50%);
 }
 
 .header-xtra .ss-ico:hover ,
-.header-xtra .sc-ico:hover {
+.header-xtra .sc-ico:hover ,
+.header-xtra .su-ico:hover {
     color: #B59E5C;
 }
 
@@ -3559,6 +3561,10 @@ transform:translateY(-50%);
 }
 
 .s-cart {
+	display:inline-block;
+}
+
+.s-user {
 	display:inline-block;
 }
 

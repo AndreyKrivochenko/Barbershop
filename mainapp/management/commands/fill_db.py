@@ -3,6 +3,7 @@ import os
 
 from django.core.management import BaseCommand
 
+from authapp.models import ShopUser
 from mainapp.models import ClassForMainGallery, MainGallery, MainSlider, AboutUs
 from servicesapp.models import ServicesCategories, Services
 
@@ -60,3 +61,5 @@ class Command(BaseCommand):
             cat_obj = ServicesCategories.objects.get(name=service_cat)
             service['category'] = cat_obj
             Services.objects.create(**service)
+
+        super_user = ShopUser.objects.create_superuser('admin', 'admin@mail.ru', '123', age=42)

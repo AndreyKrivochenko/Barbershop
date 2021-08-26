@@ -46,6 +46,7 @@ INSTALLED_APPS = [
 
     'mainapp.apps.MainappConfig',
     'servicesapp.apps.ServicesappConfig',
+    'authapp.apps.AuthappConfig',
 ]
 
 MIDDLEWARE = [
@@ -79,6 +80,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'Barbershop.wsgi.application'
+AUTH_USER_MODEL = 'authapp.ShopUser'
 
 
 # Database
